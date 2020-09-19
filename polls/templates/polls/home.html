@@ -1,0 +1,17 @@
+{% extends "polls/base.html" %}
+{% block content %}
+	{% for file in files %}
+	<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <a class="mr-2" href="#">{{ file.user }}</a>
+		      <small class="text-muted">{{ file.date_posted }}</small>
+		    </div>
+		    <h2><a class="article-title" href="#">{{ file.title }}</a></h2>
+		    
+		  </div>
+		</article>
+	{% endfor %}
+</body>
+</html>
+{% endblock content %}

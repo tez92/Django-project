@@ -1,0 +1,13 @@
+{% extends "polls/base.html" %}
+{% block content %}
+	<h4>Upload</h4>
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<label for="title">Title:</label><br>
+		<input type="text" id="title" name="title"><br>
+		<label for="author">Author:</label><br>
+		<input type="text" id="author" name="author"><br><br>
+		<input type="file" name="document">
+		<button type="submit" class="btn btn-primary">Upload file</button>
+	</form>	
+{% endblock content %}
